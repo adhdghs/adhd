@@ -15,7 +15,8 @@ body {
 }
 
 /* --- Basic Link Styling --- */
-a {
+a,
+a:visited {
   color: inherit; /* Default text color (e.g., black) */
   text-decoration: none; /* Removes default underline */
 }
@@ -28,11 +29,6 @@ a:hover {
   transition: color 0.3s ease;
     background-color: transparent;
     cursor: pointer;
-}
-
-/* --- Visited/Active States (Optional but recommended) --- */
-a:visited {
-  color: #000; /* Keep visited links same color */
 }
 
 a:active {
@@ -128,7 +124,7 @@ nav ul li a {
     text-align: center;
 }
 
-.galkery-styles div {
+.gallery-styles div {
     background: white;
     padding: 20px;
     margin: 10px;
@@ -481,6 +477,7 @@ img {
 #website {
     display: none !important;
 }
+
 
 
 
