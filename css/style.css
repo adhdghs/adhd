@@ -14,6 +14,14 @@ body {
     font-size: 14px;
 }
 
+a:link {
+  color: green; /* Unvisited link color */
+}
+
+a:visited {
+  color: pink; /* Visited link color */
+}
+
 a:hover {
   color: orange; /* Mouse over link color */
 }
@@ -463,4 +471,5 @@ img {
 #website {
     display: none !important;
 }
+
 
