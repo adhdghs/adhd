@@ -123,7 +123,7 @@ nav ul li a {
     padding: 40px 20px;
     text-align: center;
 }
-
+/*
 .gallery-styles div {
     background: white;
     padding: 20px;
@@ -132,6 +132,7 @@ nav ul li a {
     width: 200px;
     border-radius: 5px;
 }
+*/
 
 .gallery-styles {
     display: flex;
@@ -477,6 +478,7 @@ img {
 #website {
     display: none !important;
 }
+
 
 
 
