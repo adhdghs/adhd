@@ -14,21 +14,29 @@ body {
     font-size: 14px;
 }
 
-a:link {
-  color: green; /* Unvisited link color */
+/* --- Basic Link Styling --- */
+a {
+  color: #000; /* Default text color (e.g., black) */
+  text-decoration: none; /* Removes default underline */
 }
 
-a:visited {
-  color: pink; /* Visited link color */
-}
-
+/* --- Hover Effect --- */
 a:hover {
-  color: orange; /* Mouse over link color */
+  color: blue; /* Changes text to blue on hover */
+  /* text-decoration: none; /* Ensures no underline on hover */
+  /* Add transition for smooth effect (optional) */
+  transition: color 0.3s ease;
+}
+
+/* --- Visited/Active States (Optional but recommended) --- */
+a:visited {
+  color: #000; /* Keep visited links same color */
 }
 
 a:active {
-  color: red; /* Selected link color */
+  color: blue; /* Keep active (clicked) same color */
 }
+
 
 nav {
     background: #2e7d32;
@@ -471,5 +479,6 @@ img {
 #website {
     display: none !important;
 }
+
 
 
