@@ -26,6 +26,8 @@ a:hover {
   /* text-decoration: none; /* Ensures no underline on hover */
   /* Add transition for smooth effect (optional) */
   transition: color 0.3s ease;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 /* --- Visited/Active States (Optional but recommended) --- */
@@ -479,6 +481,7 @@ img {
 #website {
     display: none !important;
 }
+
 
 
 
