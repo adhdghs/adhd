@@ -94,7 +94,7 @@ function toggleReadMore(index) {
   button.textContent = isOpen ? "Read More" : "Read Less";
 }
 
-/*Hero Slider*/
+/* Hero Slider */
 fetch("data/news.json")
   .then(res => res.json())
   .then(data => {
@@ -121,7 +121,7 @@ fetch("data/news.json")
       const subtitle = document.createElement("p");
       subtitle.textContent = item.content.slice(0, 100) + "...";  // Show first 100 characters
 
-       // Create Read More button
+      // Create Read More button
       const readMoreButton = document.createElement("a");
       readMoreButton.classList.add("read-more");
       readMoreButton.href = item.link; // Link to full article
@@ -140,12 +140,33 @@ fetch("data/news.json")
     });
 
     // Make the first slide active
-    heroSlider.querySelector('.slide').classList.add('active');
-
-    // Optionally: Set up auto slide transition
-    let currentIndex = 0;
     const slides = document.querySelectorAll(".hero-slider .slide");
+    slides[0].classList.add('active');
 
+    // Create dots based on the number of slides
+    const sliderDotsContainer = document.querySelector(".slider-dots");
+    sliderDotsContainer.innerHTML = ''; // Clear existing dots (if any)
+
+    slides.forEach((slide, index) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      dot.setAttribute("data-slide", index); // Set slide index to each dot
+      if (index === 0) {
+        dot.classList.add("active"); // Set the first dot as active
+      }
+      sliderDotsContainer.appendChild(dot);
+    });
+
+    // Function to update the active dot
+    function updateDots() {
+      const dots = document.querySelectorAll('.slider-dots .dot');
+      dots.forEach(dot => dot.classList.remove('active')); // Remove active class from all dots
+      dots[currentIndex].classList.add('active'); // Add active class to the current dot
+    }
+
+    let currentIndex = 0;
+
+    // Slide change functions
     function changeSlide() {
       // Remove 'active' class from all slides
       slides.forEach(slide => slide.classList.remove("active"));
@@ -153,59 +174,58 @@ fetch("data/news.json")
       // Add 'active' class to the next slide
       currentIndex = (currentIndex + 1) % slides.length;  // Loop back to 0 after the last slide
       slides[currentIndex].classList.add("active");
+
+      // Update the dots
+      updateDots();
     }
 
+    // Manual navigation with prev and next buttons
     const prevButton = document.querySelector(".prev-slide");
     const nextButton = document.querySelector(".next-slide");
-    const dots = document.querySelectorAll('.dot');
-
-    // Function to update the active dot
-    function updateDots() {
-      dots.forEach(dot => dot.classList.remove('active')); // Remove active class from all dots
-      dots[currentIndex].classList.add('active'); // Add active class to the current dot
-    }
 
     function prevSlide() {
-    // Remove 'active' class from all slides
-    slides.forEach(slide => slide.classList.remove("active"));
+      // Remove 'active' class from all slides
+      slides.forEach(slide => slide.classList.remove("active"));
+      
+      // Go to the previous slide
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      slides[currentIndex].classList.add("active");
 
-    // Go to the previous slide
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    slides[currentIndex].classList.add("active");
-
-    // Update the dots
-    updateDots();
+      // Update the dots
+      updateDots();
     }
 
     function nextSlide() {
-    // Remove 'active' class from all slides
-    slides.forEach(slide => slide.classList.remove("active"));
+      // Remove 'active' class from all slides
+      slides.forEach(slide => slide.classList.remove("active"));
+      
+      // Go to the next slide
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add("active");
 
-    // Go to the next slide
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].classList.add("active");
-
-    // Update the dots
-    updateDots();
+      // Update the dots
+      updateDots();
     }
 
-    // Listen for manual slide changes
+    // Listen for manual slide changes (Prev and Next buttons)
     prevButton.addEventListener("click", prevSlide);
     nextButton.addEventListener("click", nextSlide);
     
     // Listen for dot clicks
+    const dots = document.querySelectorAll('.slider-dots .dot');
     dots.forEach(dot => {
       dot.addEventListener("click", () => {
         currentIndex = parseInt(dot.getAttribute("data-slide"));
         slides.forEach(slide => slide.classList.remove("active"));
         slides[currentIndex].classList.add("active");
+
+        // Update the dots
         updateDots();
       });
     });
 
     // Change slide every 5 seconds
     setInterval(changeSlide, 5000);
-    
   })
   .catch(error => {
     console.error("Error loading news data:", error);
