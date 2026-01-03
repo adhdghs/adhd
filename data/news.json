@@ -2,16 +2,22 @@
   {
     "title": "District-wide Immunization Exercise",
     "date": "2025-02-12",
-    "content": "The Directorate conducted a successful immunization campaign across all sub-districts."
+    "content": "The Directorate conducted a successful immunization campaign across all sub-districts.",
+    "link": "news/district-immunization.html",
+    "image": "images/immunization.jpg"
   },
   {
     "title": "World Malaria Day Activities",
     "date": "2025-04-25",
-    "content": "Community outreach and sensitization were held to mark World Malaria Day."
+    "content": "Community outreach and sensitization were held to mark World Malaria Day.",
+    "link": "news/world-malaria-day.html",
+    "image": "images/malaria-day.jpg"
   },
   {
     "title": "Maternal Health Review Meeting",
     "date": "2025-06-03",
-    "content": "Stakeholders met to review maternal health indicators in the district."
+    "content": "Stakeholders met to review maternal health indicators in the district.",
+    "link": "news/maternal-health-review.html",
+    "image": "images/maternal-health.jpg"
   }
 ]

@@ -122,6 +122,7 @@ nav ul li a {
     font-weight: bold;
 }
 
+/*
 .hero {
     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
                 url("../assets/images/slide1.jpg");
@@ -130,7 +131,7 @@ nav ul li a {
     text-align: center;
     padding: 80px 20px;
 }
-
+*/
 
 .welcome, .quick-links {
     padding: 40px 20px;
@@ -529,10 +530,160 @@ img {
     display: none !important;
 }
 
+/*Latest News & Updates in index.html*/
+.news-links {
+    padding: 0px 0px;
+    text-align: left;
+    background: #ffffff;
+    color: #2e7d32;
+    text-decoration: none;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    font-weight: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.news-links div {
+    /*background: rgb(255, 255, 255);*/
+    padding: 0px;
+    margin: 10px;
+    display: flex;
+    width: auto;
+    border-radius: 5px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.news-links:hover,
+.news-links:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.news-links span {
+    margin-top: 8px;
+}
+
+/*
+.news-item {
+    padding: 15px;
+    border-radius: 6px;
+    background: #fff;
+}
+*/
+
+.news-links article {
+    /*background: rgb(255, 255, 255);*/
+    padding: 5px;
+    margin: 5px;
+    gap: 0px;
+    border-radius: 15px;
+    background-color: #dee6e0;
+    
+}
+
+.news-links img {
+    width: 100%;         /* Make the image span the full width */
+    height: 200px;       /* Set a fixed height */
+    object-fit: cover;   /* Ensures the image is scaled to cover the area without distortion */
+    border-radius: 8px;  /* Optional: Rounded corners for a cleaner look */
+    margin-bottom: 10px; /* Space between the image and text */
+}
+
+.read-more {
+    background-color: #71b874;    /* Green background */
+    cursor: pointer;
+    border: none;
+    color: #fff;                  /* White text */
+    padding: 10px 20px;            /* Padding for button */
+    font-size: 12px;               /* Font size */
+    font-weight: bold;
+    border-radius: 5px;           /* Rounded corners */
+    text-align: left;
+    text-decoration: none;        /* Remove underline */
+    display: inline-block;        /* Display as inline block */
+    margin-top: 10px;             /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.read-more:hover {
+    background-color: #1b5e20;   /* Darker green on hover */
+}
+.read-more:focus {
+    outline: none; /* Ensure no outline on focus */
+}
+/*
+.read-more-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+.read-more-link:hover {
+    text-decoration: underline;
+}
+*/
 
 
+/*news.html*/
+.latest-links {
+    padding: 0px 0px;
+    text-align: left;
+    background: #ffffff;
+    color: #2e7d32;
+    text-decoration: none;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: center;
+    font-weight: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 20px;
+    flex-wrap: wrap;
+    display: flex;
+}
 
+.latest-links div {
+    /*background: rgb(255, 255, 255);*/
+    padding: 0px;
+    margin: 10px;
+    display: auto;
+    width: auto;
+    border-radius: 5px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 
+.latest-links:hover,
+.latest-links:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
+.latest-links span {
+    margin-top: 8px;
+}
+
+.latest-links article {
+    /*background: rgb(255, 255, 255);*/
+    padding: 5px;
+    margin: 5px;
+    gap: 0px;
+    border-radius: 5px;
+    background-color: #dee6e0;   
+}
+
+.news-image {
+    width: 100%;   /* Ensures the image takes the full width of the article */
+    height: auto;  /* Keeps the aspect ratio intact */
+    margin-top: 10px;
+    border-radius: 8px;  /* Optional: adds a nice rounded border */
+}
 
 

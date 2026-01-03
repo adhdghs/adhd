@@ -32,6 +32,7 @@ Asuogyaman-health/
 ├── about.html
 ├── departments.html
 ├── services.html
+├── news.html
 ├── media.html
 ├── contact.html
 │
