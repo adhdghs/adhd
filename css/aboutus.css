@@ -108,7 +108,7 @@
 
 .district-profile .section-title {
     font-size: 1.8rem;
-    color: #15c048;
+    color: #1b5e20;
     border-bottom: 2px solid #15c048;
     padding-bottom: 5px;
     margin-bottom: 20px;
@@ -154,7 +154,7 @@
 .health-subdistricts .section-title {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #15c048;
+    color: #1b5e20;
     margin-bottom: 15px;
     text-transform: uppercase;
     border-bottom: 2px solid #15c048;
@@ -177,7 +177,7 @@
 }
 
 .accordion-toggle {
-    background-color: #15c048;
+    background-color: #1b5e20;
     color: white;
     padding: 10px;
     font-size: 1.2rem;
